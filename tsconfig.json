@@ -1,0 +1,27 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "compilerOptions": {
+    "moduleResolution": "node16",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "types": ["node", "reflect-metadata"],
+    "rootDir": ".",
+    "baseUrl": ".",
+    "outDir": "dist/out-tsc",
+    "strict": false
+  },
+  "include": ["src"],
+  "exclude": [
+    "node_modules",
+    "templates",
+    "tmp",
+    "test",
+    "dist",
+    "__mocks__",
+    "**/*spec.ts",
+    "jest.config.ts"
+  ]
+}

@@ -1,0 +1,9 @@
+services:
+  bridge-postgres:
+    image: postgres:15.1-alpine
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_DB=${TYPEORM_DATABASE}
+      - POSTGRES_USER=${TYPEORM_USERNAME}
+      - POSTGRES_PASSWORD=${TYPEORM_PASSWORD}
